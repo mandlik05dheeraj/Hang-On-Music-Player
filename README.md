@@ -2,6 +2,8 @@
 # Hang On : Music Player Website
 
 This is a music web application for playing music online. Users can access this site for **free**, they can create playlists, and listen to their favorite tunes on new and latest User Interface.
+![image](https://github.com/mandlik05dheeraj/Hang-On-Music-Player/assets/95926056/2f41edb2-574c-47db-82da-4dba27bc4d41)
+
 
 ## Features
 
