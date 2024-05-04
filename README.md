@@ -1,73 +1,71 @@
-# Hang-On-Music-Player
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player Website</title>
-</head>
-<body>
-    <h1>Music Player Website</h1>
 
-    <p>This is a simple web application for playing music online. Users can upload their own music files, create playlists, and listen to their favorite tunes.</p>
+# React + TypeScript + Vite	# Random Quote Generator with Speech (React + TypeScript)
 
-    <h2>Features</h2>
-    <ul>
-        <li><strong>User Authentication:</strong> Users can create accounts, log in, and log out securely.</li>
-        <li><strong>Upload Music:</strong> Users can upload their own music files to the platform.</li>
-        <li><strong>Create Playlists:</strong> Users can create custom playlists and add songs to them.</li>
-        <li><strong>Search Functionality:</strong> Users can search for songs by title, artist, or album.</li>
-        <li><strong>Responsive Design:</strong> The website is optimized for various screen sizes and devices.</li>
-    </ul>
 
-    <h2>Technologies Used</h2>
-    <ul>
-        <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
-        <li><strong>Backend:</strong> Node.js, Express.js</li>
-        <li><strong>Database:</strong> MongoDB</li>
-        <li><strong>Authentication:</strong> JSON Web Tokens (JWT)</li>
-        <li><strong>File Uploads:</strong> Multer</li>
-        <li><strong>Audio Playback:</strong> HTML5 Audio API</li>
-    </ul>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.	This is a simple web application built using React and TypeScript that fetches random quotes from an API and allows users to hear the quote spoken aloud.
 
-    <h2>Setup</h2>
-    <ol>
-        <li><strong>Clone the repository:</strong>
-            <code>git clone https://github.com/your-username/music-player.git</code>
-        </li>
-        <li><strong>Install dependencies:</strong>
-            <code>cd music-player<br>npm install</code>
-        </li>
-        <li><strong>Set environment variables:</strong>
-            <ul>
-                <li>Create a <code>.env</code> file in the root directory</li>
-                <li>Define the following variables:
-                    <pre>
-PORT=3000
-MONGODB_URI=mongodb://localhost/music-player
-JWT_SECRET=your-secret-key
-                    </pre>
-                </li>
-            </ul>
-        </li>
-        <li><strong>Start the server:</strong>
-            <code>npm start</code>
-        </li>
-        <li><strong>Access the application:</strong> Open your web browser and navigate to <code>http://localhost:3000</code></li>
-    </ol>
 
-    <h2>Contributing</h2>
-    <p>Contributions are welcome! If you'd like to contribute to this project, please follow these steps:</p>
-    <ol>
-        <li>Fork the repository</li>
-        <li>Create a new branch (<code>git checkout -b feature/my-feature</code>)</li>
-        <li>Make your changes</li>
-        <li>Commit your changes (<code>git commit -am 'Add new feature'</code>)</li>
-        <li>Push to the branch (<code>git push origin feature/my-feature</code>)</li>
-        <li>Create a new Pull Request</li>
-    </ol>
+Currently, two official plugins are available:	## Features
 
-    <h2>License</h2>
-    <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
-</body>
-</html>
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh	- **Random Quotes**: Fetches quotes from [API_NAME] to display on the app.
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh	- **Text-to-Speech**: Provides a button to hear the quote read aloud using browser text-to-speech functionality.
+- **React and TypeScript**: Built with React framework using TypeScript for strict typing.
+
+
+## Expanding the ESLint configuration	## Installation
+
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:	1. Clone the repository:
+
+
+- Configure the top-level `parserOptions` property like this:	   ```bash
+   git clone https://github.com/your-username/quote-generator.git
+   ```
+
+
+```js	2. Navigate to the project directory:
+export default {	
+  // other rules...	
+  parserOptions: {	
+    ecmaVersion: 'latest',	
+    sourceType: 'module',	
+    project: ['./tsconfig.json', './tsconfig.node.json'],	
+    tsconfigRootDir: __dirname,	
+  },	
+}	
+```	
+
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`	   ```bash
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`	   cd quote-generator
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list	   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+1. Obtain an API key from [API_PROVIDER] and replace `[YOUR_API_KEY]` in `src/api.ts` with your actual API key.
+
+2. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+3. Open your browser and navigate to `http://localhost:3000` to view the app.
+
+4. Click the "Generate Quote" button to fetch a random quote. Press the "Listen" button to hear the quote spoken aloud.
+
+## Technologies Used
+
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Typed superset of JavaScript for enhanced code quality.
+
+## API Reference
+
+This app uses the (https://api.adviceslip.com/advice) API to fetch random quotes. For more information.
